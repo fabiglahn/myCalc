@@ -8,7 +8,7 @@
 
 :root {
   /* COLORS */
-  --color-primary: #58a6ff;
+  --color-primary: #578f29;
   --color-text: #c9d1d9;
   --color-background: #0d1117;
 
@@ -41,4 +41,19 @@ h5 {
   display: grid;
   align-content: center;
   justify-items: center;
+}
+
+button {
+  color: var(--color-primary);
+  height: 3rem;
+  width: 3rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+input {
+  text-align: center;
+  color: var(--color-primary);
+  width: 15vh;
 }
