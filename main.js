@@ -1,9 +1,7 @@
-import {
-  createButtonComponent,
-  createInputComponent,
-} from "./lib/functions.js";
+import { createButtonComponent } from "./lib/functions.js";
 import { createExplComponent } from "./lib/explanation.js";
 import { createTitleComponent } from "./lib/titleComponent.js";
+import { createInputComponent } from "./lib/input.js";
 
 // Declare a function to create the elements and logic inside the #app element
 function createApp() {
@@ -16,22 +14,22 @@ function createApp() {
   const explComponent = createExplComponent();
   appElement.append(explComponent);
 
-  /*   const inputElement = createInputComponent();
-  appElement.append(inputElement); */
+  const inputElement = createInputComponent();
+  appElement.append(inputElement);
 
   //Call the createInputComponent function to create 2 inputs for the numbers:
-  const numberOne = createInputComponent("Number 1");
-  const numberTwo = createInputComponent("Number 2");
+  /*   const numberOne = createInputComponent("Number 1");
+  const numberTwo = createInputComponent("Number 2"); */
   appElement.append(numberOne, numberTwo);
 
   const addElement = createButtonComponent();
   appElement.append(addElement);
 
   const calcAdd = createButtonComponent("+", function () {
-    alert(Number(numberOne - value) + Number(numberTwo.value));
-
-    appElement.append(calcAdd);
+    alert(Number(numberOne.value) + Number(numberTwo.value));
   });
+
+  appElement.append(calcAdd);
 }
 
 // Run the createApp function
